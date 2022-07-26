@@ -1,15 +1,20 @@
 import { render } from "react-dom";
-import Pet from "./Pet";
+// import SpendingTotal from "./SpendingTotal";
+import Spending from "./Budget";
+import SetBalance from "./SetBalance";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
-    <div>
-      <h1>Adopt Me!</h1>
-      {/* use map later */}
-      <Pet name="Luna" animal="dog" breed="Havanese" />
-      <Pet name="Pepper" animal="bird" breed="Cockatiel" />
-      <Pet name="Doink" animal="cat" breed="Mix" />
-    </div>
+    // replace <SearchParams /> and <h1>Adopt Me!</h1>
+    <BrowserRouter>
+      <h1>Bucket Budgeting</h1>
+      <Routes>
+        <Route path="/budget/:spend" element={<Spending />} />
+        {/* i want spending info */}
+        <Route path="/" element={<SetBalance />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
