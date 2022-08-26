@@ -7,13 +7,13 @@ const Container = styled.div`
 //use NSC logo
 const BrandName = styled.h1`
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 600;
   color: #253275;
 `;
 const Brand = () => {
   return (
     <Container>
-      <BrandName>LOGO</BrandName>
+      <BrandName>Bucket Budgeting</BrandName>
     </Container>
   );
 };

@@ -1,17 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import NewBucketButton from "./NewBucketBtn";
+import SpendingTotalHeader from "./SpendingTotalHeader";
+import BucketItems from "./BucketItem";
 const Container = styled.div`
-  width: auto;
+  width: 75rem;
   margin-left: 16rem;
+  height: 100%;
   position: relative;
-  padding: 0 4rem;
+  padding: 2rem 4rem;
+  color: pink;
+  background-color: #f0f2f5;
+  position: fixed;
+  /* left: 0; */
+  top: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const Main = () => {
   return (
     <Container>
-      <NewBucketButton></NewBucketButton>
+      <SpendingTotalHeader total={600} />
+      <BucketItems />
     </Container>
   );
 };
